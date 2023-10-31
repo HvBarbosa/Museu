@@ -1,1 +1,0 @@
-Apagou-se tudo!!!
