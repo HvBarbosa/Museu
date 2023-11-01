@@ -32,3 +32,4 @@ void LimparTela(){
     getchar();
     system("cls");
 }
+
