@@ -3,26 +3,30 @@
 void imprimirCabecalho(){
     puts("********************************************");
     puts("*                                          *");
-    puts("*                 SysMuseu                 *");
+    puts("*                 SISTEMA                  *");
+    puts("*                   DE                     *");
+    puts("*                 COMPRA                   *");
+    puts("*                INGRESSOS                 *");
     puts("*                                          *");
-    puts("*                                ADS - UNIP*");
+    puts("*                                          *");
+    puts("*                       MUSEU-MULTITEMATICO*");
     puts("********************************************");
 }
 
 void exibirMenu(){
     puts("\nEscolha uma obra desejada:");
-    puts("1 - 150 anos de Santos Dumont");
-    puts("2 - 100 ANOS DA ARTE MODERNA");
-    puts("3 - INTELIGÊNCIA ARTIFICIAL (IA)");
-    puts("4 - JOGOS OLÍMPICOS 2024");
-    puts("5 - Todas as Obras");
-    puts("6 - Sair");
-    puts("_______________________________________________________");
+    puts("1 - Comprar Ingressos");
+    puts("2 - Imprimir registros de compra");
+    puts("3 - Salvar dados da compra");
+    puts("4 - Carregar dados do Ingresso");
+    puts("5 - Sair");
+    puts("___________________");
     printf("opc: ");
 }
 
 void limparBuffer(){
     fflush(stdin);
+    getchar();
 }
 
 void LimparTela(){
@@ -32,4 +36,5 @@ void LimparTela(){
     getchar();
     system("cls");
 }
+
 
