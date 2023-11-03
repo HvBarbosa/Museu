@@ -8,36 +8,35 @@
 #define TRUE 1
 #define FALSE 0
 
-int main(){
-
+int main() {
     setlocale(LC_ALL, "");
 
     Ingresso ingressos[MAX];
-
     int ticket = 0;
-
-    typedef struct ingresso Ingresso;
     char obra[30];
+    int opc;
 
-int opc;
-
-do{
-    imprimirCabecalho();
-    exibirMenu();
-    scanf("%d", opc);
-    Ingresso ingrs;
-    switch(opc){
-        case 1: //Comprar ticket
-            break;
-        case 2: //Buscar obra
-            break;
-        case 3: //Opção de pagamento
-            break;
-        case 4: //Sair
-            break;
-            return 0;
-        default: puts("Opção inexistente, tente novamente!");
-    }
-
-}while(TRUE);
+    do {
+        imprimirCabecalho();
+        exibirMenu();
+        scanf("%d", &opc);
+        Ingresso ingrs;
+        switch (opc) {
+            case 1:
+                comprarIngressos(ingressos);
+                break;
+            case 2:
+                printIngresso2(ingressos, ticket);
+                break;
+            case 3:
+                salvarDadosIngressos(ingressos, ticket);
+                break;
+            case 4:
+                carregarDadosIngressos(ingressos, &ticket);
+                break;
+                return 0;
+            default:
+                puts("Opção inexistente, tente novamente!");
+        }
+    } while (TRUE);
 }
