@@ -38,10 +38,18 @@ void comprarIngressos(Ingresso Ingressos[]){
     int tipo;
     scanf("%d",&tipo);
 
-    while(tipo < 1 || tipo > 3){
-        puts("Tipo de ingresso: 1 - Inteiro 2 - Meia 3 - Meia Social");
-        scanf("%d",&tipo);
+    do {
+    printf("Escolha o tipo de ingresso (1 - Inteira, 2 - Meia, 3 - Meia Social): ");
+    scanf("%d", &tipo);
+
+    if (tipo == 3) {
+        printf("\nTenha um ótimo show!");
+        return;
+    } else if (tipo != 1 && tipo != 2) {
+        printf("\nOpção inválida. Escolha 1 para Inteira, 2 para Meia ou 3 para Meia Social.");
     }
+} while (tipo != 1 && tipo != 2);
+
     int numIngresso;
     printf("Digite a quantidade de ingressos desejada: ");
     scanf("%d", &numIngresso);
